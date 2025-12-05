@@ -36,7 +36,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'BeatSaberChineseWikiGroup', // Usually your GitHub org/user name.
+  organizationName: 'BeatSaberCN', // Usually your GitHub org/user name.
   projectName: 'wiki', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -54,14 +54,14 @@ const config: Config = {
       'classic',
       {
         pages:{
-          editUrl: 'https://github.com/BeatSaberChineseWikiGroup/wiki/edit/master/'
+          editUrl: 'https://github.com/BeatSaberCN/wiki/edit/master/'
         },
         docs: {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/BeatSaberChineseWikiGroup/wiki/edit/master/',
+            'https://github.com/BeatSaberCN/wiki/edit/master/',
         },
         blog: {
           blogSidebarTitle: '最近更新',
@@ -73,7 +73,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/BeatSaberChineseWikiGroup/wiki/edit/master/',
+            'https://github.com/BeatSaberCN/wiki/edit/master/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -104,7 +104,7 @@ const config: Config = {
         ...getDocFiles(),
         // {to: '/docs/category/维基建设指南', label: '维基建设', position: 'left'},
         {
-          href: 'https://github.com/BeatSaberChineseWikiGroup/wiki',
+          href: 'https://github.com/BeatSaberCN/wiki',
           label: 'GitHub',
           position: 'right',
         },
