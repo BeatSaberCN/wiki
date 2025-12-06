@@ -19,6 +19,8 @@ export default {
         return return_type('danger', 标题|| title, 内容 || content || children)
     },警告({children, 标题, 内容, title, content}) {
         return return_type('caution', 标题|| title, 内容 || content || children)
+    },注意({children, 标题, 内容, title, content}) {
+        return return_type('caution', 标题|| title || "注意", 内容 || content || children)
     },错误({children, 标题, 内容, title, content}) {
         return return_type('danger', 标题 || title || "错误", 内容 || content || children)
     }

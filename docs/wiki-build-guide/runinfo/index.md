@@ -6,7 +6,7 @@ sidebar_position: 1001
 
 这里记录如何在本地编辑并运行此维基百科。
 
-<警告 内容="此方法需要Git技能以编辑维基。只是编辑的话，你无需这样做，最简单的编辑方式是获得编辑权限后，直接点击页面上的“编辑此页”按钮。"/>
+<注意 内容="此方法需要Git技能以编辑维基。只是编辑的话，你无需这样做，最简单的编辑方式是获得编辑权限后，直接点击页面上的“编辑此页”按钮。"/>
 
 ## TLDR
 
@@ -43,7 +43,7 @@ git clone git@github.com:BeatSabeCN/wiki.git
 ![](./enter_wiki.png)
 
 输入以下指令，会自动下载并安装所有依赖：
-<警告>如果出现错误，请检查[NodeJS](https://nodejs.org/zh-cn)是否安装。</警告>
+<注意>如果出现错误，请检查[NodeJS](https://nodejs.org/zh-cn)是否安装。</注意>
 ```sh
 npm install
 ```
