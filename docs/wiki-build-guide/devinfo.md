@@ -5,6 +5,8 @@ sidebar_position: 1000
 
 ## 开发一个新的维基标签
 
+<提示>这需要您具备基本的React/TypeScript技能。</提示>
+
 这里记录如何编写代码，以开发新的维基标签。
 
 如果需要在Markdown中支持以下内容：
@@ -14,7 +16,7 @@ sidebar_position: 1000
 ```
 
 文件`src/theme/MDXComponents.tsx`中应该包含以下内容，请注意`示例标签`的写法：
-```tsx
+```tsx title=src/theme/MDXComponents.tsx
 import React from 'react';
 import MDXComponents from '@theme-original/MDXComponents';
 
@@ -27,6 +29,7 @@ export default {
   示例标签,
 };
 ```
+
 
 ## CSS设计指南
 
