@@ -65,11 +65,15 @@ sidebar_position: 200
 
 ## 模组卡片
 
-用于展示一个模组信息
+用于展示一个模组信息。省略平台会用当前页面ID自动推断。
 
 ```html
+<模组大卡 平台="PC" 名称="BeatLeader" />
 <模组 平台="PC" 名称="BeatLeader" />
 ```
 ### 示例
 
+大卡：
+<模组大卡 平台="PC" 名称="BeatLeader" />
+普通：
 <模组 平台="PC" 名称="BeatLeader" />

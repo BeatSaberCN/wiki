@@ -1,4 +1,4 @@
-<模组 name="BeatLeader" />
+<模组大卡 />
 
 # BeatLeader
 
@@ -8,5 +8,5 @@ BeatLeader是一个社区排行榜模组。
 
 该模组与以下模组兼容：
 
-<模组 name="ScoreSaber"/>
-<模组 name="Replay" 平台="quest"/>
+<模组大卡 name="ScoreSaber"/>
+<模组大卡 name="Replay" 平台="quest"/>

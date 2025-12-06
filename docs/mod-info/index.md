@@ -8,7 +8,5 @@ sidebar_position: -1
 
 本站包含部分实用模组介绍。请参考：
 
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />
+<内容列表 />
 

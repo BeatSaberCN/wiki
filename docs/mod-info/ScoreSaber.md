@@ -1,8 +1,8 @@
-<模组 name="ScoreSaber" />
+<模组大卡 />
 
 # ScoreSaber排行榜
 
-<模组 name="BeatLeader" />
+<模组大卡 name="BeatLeader" />
 
 BeatLeader是一个社区排行榜模组。
 
@@ -12,4 +12,4 @@ BeatLeader是一个社区排行榜模组。
 
 该模组可以与以下模组共同安装：
 
-<模组 name="BeatLeader" />
+<模组大卡 name="BeatLeader" />
