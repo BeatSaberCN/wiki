@@ -33,7 +33,7 @@ export default function ContentWrapper(props: Props): ReactNode {
   return (
     <>
       <Content {...props} />
-      <BrowserOnly>{appends}</BrowserOnly>
+      {appends}
     </>
   );
 }
