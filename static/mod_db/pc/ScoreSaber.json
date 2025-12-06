@@ -1,6 +1,6 @@
 {
   "platform": "pc", 
-  "modPage": null, 
+  "modPage": "ScoreSaber", 
   "name": "ScoreSaber", 
   "game_ver": [
     "1.40.0", 
