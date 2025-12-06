@@ -15,6 +15,8 @@ sidebar_position: 200
 
 点击页面上的编辑按钮即可编辑，在此之前，请确保你已经加入维基编辑组，请在Github上通过issue联系我们或加入QQ群！
 
+如需提交，点击右上角`Commit changes...`按钮。在`Commit message`一栏增加`[no ci]`前缀可以避免触发重新部署。
+
 目录大纲：
 
 * [提示框系列](#提示框系列)
