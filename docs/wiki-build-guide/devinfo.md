@@ -35,4 +35,4 @@ export default {
 
 Docusaurus的默认主题使用了[infima](https://infima.dev/docs/getting-started/introduction)作为style框架，请参考这个。
 
-不要在正文里写css，请做成组件。
+不要在正文里频繁的写css，请做成组件（只用一次的除外）。
