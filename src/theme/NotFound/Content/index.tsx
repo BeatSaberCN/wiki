@@ -13,7 +13,8 @@ sidebar_position: 200
 ---
 # 新建页面模板
 
-你可以更改上面的sidebar_position，越小的数字越靠上`
+你可以更改上面的sidebar_position，它会影响当前
+文档在左侧导航栏的位置，越小的数字越靠上`
 
 export default function ContentWrapper(props: Props): ReactNode {
 
