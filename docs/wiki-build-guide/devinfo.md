@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1000
 ---
+# JS/CSS/MDX设计【程序员】
 
-# 开发一个新的维基标签【程序员】
+## 开发一个新的维基标签
 
 这里记录如何编写代码，以开发新的维基标签。
 
@@ -27,7 +28,7 @@ export default {
 };
 ```
 
-# CSS设计指南
+## CSS设计指南
 
 Docusaurus的默认主题使用了[infima](https://infima.dev/docs/getting-started/introduction)作为style框架，请参考这个。
 
