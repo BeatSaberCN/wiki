@@ -19,6 +19,8 @@
 
   --ifm-leading-desktop: 0.9;
   --ifm-line-height-base: 1.4;
+
+  --mod-card-color-bg: rgb(222 231 228);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -31,4 +33,12 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --mod-card-color-bg: rgb(33 36 49);
+
+}
+
+[data-theme='dark']
+.dark-contrast{
+  filter: contrast(0);
 }

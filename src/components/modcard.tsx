@@ -44,7 +44,7 @@ function renderMod(modData: ModData){
     modData.extern_links.forEach((v,index)=>{
         let btnName:any = "外链"
         if(v.indexOf("github.com") > 0){
-            btnName = <GithubSvg style={{
+            btnName = <GithubSvg className='dark-contrast' style={{
                 transform:"scale(0.15)",
                 margin:"-42px"
             }} />
@@ -82,8 +82,7 @@ function renderMod(modData: ModData){
     }
 
     if(isSelfPage){
-        cardStyle.backgroundColor = 'var(--ifm-color-warning-lightest)'
-        cardStyle.color = 'black'
+        cardStyle.backgroundColor = 'var(--mod-card-color-bg)'
     }
 
     return <div key={modData.name + modData.platform} style={{
