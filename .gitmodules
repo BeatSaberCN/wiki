@@ -1,0 +1,6 @@
+[submodule "wiki_datas"]
+	path = wiki_datas
+	url = git@github.com:BeatSaberCN/wiki_datas.git
+[submodule "cn_mod_db"]
+	path = cn_mod_db
+	url = git@github.com:BeatSaberCN/cn_mod_db.git

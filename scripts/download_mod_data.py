@@ -1,6 +1,6 @@
 '''
 
-直接使用即可，在git根目录下执行，会自动更新src/server/mod_db中的数据
+直接使用即可，在git根目录下执行，会自动更新cn_mod_db中的数据
 
 '''
 
@@ -72,7 +72,7 @@ for version in VERSIONS_QUEST:
     # handle quest pages
     for k in modjson:
         latest = modjson[k][max(modjson[k])]
-        page_name = f"src/server/mod_db/quest/{latest['id']}.json"
+        page_name = f"cn_mod_db/quest/{latest['id']}.json"
 
         if page_name in buffered_pages:
             buffered_page = buffered_pages[page_name]
@@ -83,7 +83,7 @@ for version in VERSIONS_QUEST:
             buffered_page.json["desc_en"] = latest["description"]
             buffered_page.json["platform"] = "quest"
             buffered_page.json["iscore"] = latest["id"] in coremod_ids
-            buffered_page.json["editpath"] = page_name
+            buffered_page.json["editpath"] = f"quest/{latest['id']}.json"
 
         if "website" in latest and latest["website"] != None and latest["website"] != "":
             buffered_page.links.add(latest["website"])
@@ -102,7 +102,7 @@ for version in VERSIONS_PC:
     for mod in pcmods["mods"]:
         _latest = mod["latest"]
         _mod = mod["mod"]
-        page_name = f"src/server/mod_db/pc/{_mod["name"]}.json"
+        page_name = f"cn_mod_db/pc/{_mod["name"]}.json"
         
         if page_name in buffered_pages:
             buffered_page = buffered_pages[page_name]
@@ -113,7 +113,7 @@ for version in VERSIONS_PC:
             buffered_page.json["desc_en"] = _mod["description"]
             buffered_page.json["platform"] = "pc"
             buffered_page.json["iscore"] = _mod["category"] == "core"
-            buffered_page.json["editpath"] = page_name
+            buffered_page.json["editpath"] = f"pc/{_mod["name"]}.json"
             
         for author in _mod["authors"]:
             buffered_page.authors.add(author['displayName'])

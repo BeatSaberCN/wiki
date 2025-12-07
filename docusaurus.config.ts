@@ -56,10 +56,11 @@ const config: Config = {
       'classic',
       {
         pages:{
+          path:'wiki_datas/pages',
           editUrl: (e)=>urls.editPagesUrl(e.pagesPath)
         },
         docs: {
-          path:'docs',
+          path:'wiki_datas/docs',
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -67,6 +68,7 @@ const config: Config = {
             (e)=>urls.editDocsUrl(e.docPath),
         },
         blog: {
+          path:'wiki_datas/blog',
           blogSidebarTitle: '最近更新',
           showReadingTime: true,
           feedOptions: {

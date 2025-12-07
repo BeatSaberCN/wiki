@@ -27,7 +27,7 @@ def read_json(f:pathlib.Path):
         createModMarkdown(mdfile, data)
 
 
-for f in pathlib.Path("src/server/mod_db").rglob("**/*.json"):
+for f in pathlib.Path("cn_mod_db").rglob("**/*.json"):
     read_json(f)
 
 pathlib.Path('src/server/mod_data_generated.ts').write_text("""

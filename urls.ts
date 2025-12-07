@@ -2,12 +2,12 @@
 let edit_url = 'https://github.com/BeatSaberCN/wiki/edit/master/'
 let new_url = 'https://github.com/BeatSaberCN/wiki/new/master/'
 
-let datas_url = 'https://github.com/BeatSaberCN/wiki_datas/edit/master/'
-let datas_new_url = 'https://github.com/BeatSaberCN/wiki_datas/new/master/'
+let datas_url = 'https://github.com/BeatSaberCN/wiki_datas/edit/main/'
+let datas_new_url = 'https://github.com/BeatSaberCN/wiki_datas/new/main/'
 
 
 export default {
-    moddb_edit_path : "https://github.com/BeatSaberCN/cn_mod_db/edit/master/",
+    moddb_edit_path : "https://github.com/BeatSaberCN/cn_mod_db/edit/main/",
     editDocsUrl(path:string):string{
         return datas_url + "docs/" + path
     },
@@ -17,7 +17,7 @@ export default {
     },
 
     editPagesUrl(path:string):string{
-        return edit_url + "src/pages/" + path
+        return datas_url + "pages/" + path
     },
 
     newDocsUrl(path:string):string{
@@ -29,6 +29,6 @@ export default {
     },
 
     newPagesUrl(path:string):string{
-        return new_url + "src/pages/" + path
+        return datas_new_url + "pages/" + path
     },
 };
