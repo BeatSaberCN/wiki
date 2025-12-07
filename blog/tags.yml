@@ -1,4 +1,21 @@
 hello:
   label: 你好，世界
   permalink: /hello
-  description: Hello tag description
+  description: 这个标签是用来测试的
+tutorial:
+  label: 教程
+  permalink: /tutorial
+  description: 这是教程
+basic:
+  label: 基础
+  permalink: /basic
+  description: 这是基础操作
+gameplay:
+  label: 玩法
+  permalink: /gameplay
+  description: 这些是玩法指南
+advanced:
+  label: 进阶
+  permalink: /advanced
+  description: 这是进阶操作
+
