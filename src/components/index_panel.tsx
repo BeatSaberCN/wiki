@@ -27,7 +27,7 @@ authors: 匿名
 <!-- truncate -->
 
 这部分不会被显示在摘要里。 `
-        let url = urls.new_url + "blog/?filename=" + encodeURIComponent(page_name) + "&value=" + encodeURIComponent(page_content)
+        let url = urls.newBlogUrl("") + "?filename=" + encodeURIComponent(page_name) + "&value=" + encodeURIComponent(page_content)
         window.open(url)
     }}>新建博客</button>
 }

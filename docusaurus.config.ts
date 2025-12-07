@@ -56,14 +56,15 @@ const config: Config = {
       'classic',
       {
         pages:{
-          editUrl: urls.edit_url
+          editUrl: (e)=>urls.editPagesUrl(e.pagesPath)
         },
         docs: {
+          path:'docs',
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            urls.edit_url,
+            (e)=>urls.editDocsUrl(e.docPath),
         },
         blog: {
           blogSidebarTitle: '最近更新',
@@ -75,7 +76,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            urls.edit_url,
+            e=>urls.editBlogUrl(e.blogPath),
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',

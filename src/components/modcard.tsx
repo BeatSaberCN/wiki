@@ -76,7 +76,7 @@ function renderMod(modData: ModData){
         )
     }
 
-    foots.push(<a key="edit" target='_blank' href={urls.edit_url + modData.editpath } style={{padding:"8px"}} className="button button--sm button--active button--link">编辑</a>)
+    foots.push(<a key="edit" target='_blank' href={urls.moddb_edit_path + modData.editpath } style={{padding:"8px"}} className="button button--sm button--active button--link">编辑</a>)
     const cardStyle:CSSProperties = {
         margin: "16px"
     }
