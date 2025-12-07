@@ -18,6 +18,15 @@ jobs:
         with:
           fetch-depth: 0
           submodules: 'true'
+          
+      - name: pull the wiki datas
+        working-directory: ./wiki_datas
+        run: git pull
+
+      - name: pull the mod jsons
+        working-directory: ./cn_mod_db
+        run: git pull
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
