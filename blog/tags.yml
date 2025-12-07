@@ -2,6 +2,14 @@ hello:
   label: 你好，世界
   permalink: /hello
   description: 这个标签是用来测试的
+wikiadmin:
+  label: 维基管理
+  permalink: /wikiadmin
+  description: 这些是维基管理相关的内容
+update:
+  label: 更新日志
+  permalink: /update
+  description: 这些是一些更新信息
 tutorial:
   label: 教程
   permalink: /tutorial

@@ -2,12 +2,12 @@
 slug: first-blog
 title: 这是一篇博客
 authors: frto027
-tags: [hello]
+tags: [hello, wikiadmin]
 ---
 
 # 测试一下
 
-这是第一篇博客
+这是第一篇博客。
 
 虽说是中文，但是排版很不友好，需要改进。
 <!-- truncate -->

@@ -3,6 +3,7 @@ import MDXComponents from '@theme-original/MDXComponents';
 import Admonitions from "@site/src/components/admonitions"
 import modcard from "@site/src/components/modcard"
 import doccard from "@site/src/components/doccard"
+import joinus from '../components/joinus';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import the FontAwesomeIcon component.
 import { library } from '@fortawesome/fontawesome-svg-core'; // Import the library component.
@@ -24,6 +25,7 @@ export default {
   ...Admonitions,
   ...modcard,
   ...doccard,
+  ...joinus,
   FAIcon: FontAwesomeIcon
 };
 
