@@ -30,9 +30,9 @@ tags: [wikiadmin, update]
 
 ## 为什么不是MediaWiki？
 
-不得不承认，MediaWiki是先进的。可是，它需要维护成本。考虑到自建MediaWiki并不会降低编辑门槛，因为做不到开放注册，不如直接依赖GitHub提供的可靠平台。
+不得不承认，MediaWiki是先进的，它有着更加完善的账号系统，更加实用的模板系统，更加专业的合作编辑能力。可是，它需要维护成本。考虑到自建MediaWiki并不会降低编辑门槛，因为做不到开放注册，不如直接依赖GitHub提供的可靠平台。
 
-这个维基的服务器基于GitHub，从[Docusaurus](https://docusaurus.io/)定制而来，你不需要掌握Git技能就可以进行编辑。编辑非常简单，只要加个群就行了。
+这个维基的服务器基于GitHub，从[Docusaurus](https://docusaurus.io/)定制而来，你不需要掌握Git技能就可以进行编辑。编辑非常简单，无需Fork，只要加个群就行了。
 <加入我们 />
 
 ## 这个维基提供了什么？
