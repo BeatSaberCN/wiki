@@ -5,6 +5,7 @@
 '''
 import pathlib
 import json
+import requests
 
 database = {}
 
@@ -31,11 +32,33 @@ for f in pathlib.Path("cn_mod_db").rglob("**/*.json"):
     read_json(f)
 
 pathlib.Path('src/server/mod_data_generated.ts').write_text("""
-// 这个只允许用于服务器端渲染，因为它太大了
-
 import { ModData } from "../mod_data"
 
 let ret: Record<'pc' | 'quest', Record<string, ModData>> = 
 """ + json.dumps(database) + """
 export default ret
+""", encoding='utf8')
+
+############### update realtime infos ##########
+
+import datetime
+import re
+build_time = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8), name='Asia/Shanghai')).date()
+
+quest_mod_versions = requests.get(f"https://mods.bsquest.xyz/versions.json").json()
+filtered_quest_mod_versions = [x for x in quest_mod_versions if re.match('^[0-9\\._]+$', x)]
+latest_quest_version = max(filtered_quest_mod_versions)
+
+bsm_versions = requests.get(f"https://raw.githubusercontent.com/Zagrios/bs-manager/refs/heads/master/assets/jsons/bs-versions.json").json()
+recommand_bsm_version = "暂无推荐"
+for v in bsm_versions:
+    if 'recommended' in v:
+        recommand_bsm_version = v["BSVersion"]
+
+pathlib.Path('src/server/realtime_infos.ts').write_text(f"""
+export default {'{'}
+    build_time : "{build_time.year}年{build_time.month}月{build_time.day}日",
+    quest_ver : "{latest_quest_version}",
+    bsm_recomm_ver: "{recommand_bsm_version}"
+{'}'}
 """, encoding='utf8')

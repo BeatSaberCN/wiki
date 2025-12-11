@@ -1,6 +1,4 @@
 
-// 这个只允许用于服务器端渲染，因为它太大了
-
 import { ModData } from "../mod_data"
 
 let ret: Record<'pc' | 'quest', Record<string, ModData>> = 
