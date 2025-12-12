@@ -15,6 +15,9 @@ VERSIONS_QUEST = [
     "1.40.8_7379",
     "1.37.0_9064817954"
 ]
+core_mod_jsons = requests.get("https://github.com/QuestPackageManager/bs-coremods/raw/refs/heads/main/core_mods.json").json()
+VERSIONS_QUEST = [x for x in core_mod_jsons if x >= '1.27.0']
+VERSIONS_QUEST.sort(reverse=True)
 
 VERSIONS_PC = [
     "1.40.8"
@@ -28,6 +31,7 @@ corejson = requests.get(f"https://github.com/QuestPackageManager/bs-coremods/raw
 class BufferedMod:
     def __init__(self, file:pathlib.Path):
         self.file = file
+        self.game_to_mod_versions = {}
         if file.exists():
             self.json = json.loads(file.read_text(encoding='utf8'))
         else:
@@ -58,6 +62,8 @@ class BufferedMod:
         links.sort()
         self.json["extern_links"] = links
 
+        self.json["game_to_mod_version"] = self.game_to_mod_versions
+
         self.file.write_text(json.dumps(self.json, indent=2, ensure_ascii=False, separators=(', ',': ')), encoding='utf8')
 
 buffered_pages = dict[str, BufferedMod]()
@@ -84,6 +90,12 @@ for version in VERSIONS_QUEST:
             buffered_page.json["platform"] = "quest"
             buffered_page.json["iscore"] = latest["id"] in coremod_ids
             buffered_page.json["editpath"] = f"quest/{latest['id']}.json"
+        
+        mod_version = latest["version"]
+        if not version in buffered_page.game_to_mod_versions:
+            buffered_page.game_to_mod_versions[version] = mod_version
+        else:
+            buffered_page.game_to_mod_versions[version] = max(buffered_page.game_to_mod_versions[version], mod_version)
 
         if "website" in latest and latest["website"] != None and latest["website"] != "":
             buffered_page.links.add(latest["website"])

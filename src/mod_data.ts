@@ -11,4 +11,5 @@ export interface ModData{
     authors: string[],
     editpath: string,
     beatmods_id?: number,
+    game_to_mod_version?:Record<string/*game ver*/, string/*latest mod ver*/>,
 }

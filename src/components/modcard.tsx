@@ -190,8 +190,45 @@ function 模组({ 平台, 名称, platform, name }) {
 
 }
 
+function 模组支持版本({名称,name, platform, 平台}){
+    let mod_name = 名称 || name
+    let plat = platform||平台||"quest"
+
+
+    let data:ModData = modDataGenerated[plat.toLowerCase()][mod_name.toLowerCase()]
+    if(data == undefined)
+        return <>找不到{plat}模组{mod_name}</>
+    if(!data.game_to_mod_version){
+        return <>无</>
+    }
+    let latest_mod_ver:string
+    for(let game_ver in data.game_to_mod_version){
+        if(latest_mod_ver == undefined)
+            latest_mod_ver = data.game_to_mod_version[game_ver]
+        else if(latest_mod_ver < data.game_to_mod_version[game_ver])
+            latest_mod_ver = data.game_to_mod_version[game_ver]
+    }
+
+    if(latest_mod_ver == undefined){
+        return <>无</>
+    }
+
+    let supported_game_ver = []
+    for(let game_ver in data.game_to_mod_version){
+        if(supported_game_ver.length > 0)
+            supported_game_ver.push(" ")
+        if(data.game_to_mod_version[game_ver] == latest_mod_ver){
+            supported_game_ver.push(<span className="badge badge--primary">{game_ver.split("_")[0]}</span>)
+        }else{
+            supported_game_ver.push(<span className="badge badge--secondary">{game_ver.split("_")[0]}</span>)
+        }
+    }
+
+    return <>{supported_game_ver}</>
+}
 
 export default {
     模组大卡,
-    模组
+    模组,
+    模组支持版本
 }
