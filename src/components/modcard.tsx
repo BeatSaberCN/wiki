@@ -190,6 +190,20 @@ function 模组({ 平台, 名称, platform, name }) {
 
 }
 
+function versionCompare(a, b) {
+  if (a == b) return 0;
+  let aarr = a.split("-")[0].split(".");
+  let barr = b.split("-")[0].split(".");
+  for (let i = 0; i < Math.max(aarr.length, barr.length); i++) {
+    if (aarr.length <= i) return 1; //b large
+    if (barr.length <= i) return -1; //a large
+    if (aarr[i] != barr[i]) {
+      return +aarr[i] > +barr[i] ? -1 : 1;
+    }
+  }
+  return a > b ? -1 : 1;
+}
+
 function 模组支持版本({名称,name, platform, 平台}){
     let mod_name = 名称 || name
     let plat = platform||平台||"quest"
@@ -205,7 +219,7 @@ function 模组支持版本({名称,name, platform, 平台}){
     for(let game_ver in data.game_to_mod_version){
         if(latest_mod_ver == undefined)
             latest_mod_ver = data.game_to_mod_version[game_ver]
-        else if(latest_mod_ver < data.game_to_mod_version[game_ver])
+        else if(versionCompare(latest_mod_ver, data.game_to_mod_version[game_ver]) == 1)
             latest_mod_ver = data.game_to_mod_version[game_ver]
     }
 

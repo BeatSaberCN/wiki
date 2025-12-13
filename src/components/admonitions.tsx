@@ -34,8 +34,8 @@ export default {
     网络提示({children, 内容}){
         let hint = children || 内容
         return return_type('info', "网络提示", 
-            hint ? ["该内容涉及的部分内容不向大陆地区提供服务。", <br />, hint]:
-                ["该内容涉及的部分内容不向大陆地区提供服务。"]
+            hint ? ["该内容涉及的部分服务需要连接至网络服务。", <br />, hint]:
+                ["该内容涉及的部分服务需要连接至网络服务。"]
         )
     }
 } 
