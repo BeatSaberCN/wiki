@@ -32,8 +32,13 @@ class BufferedMod:
     def __init__(self, file:pathlib.Path):
         self.file = file
         self.game_to_mod_versions = {}
+        self.oldName = ""
+        self.oldDesc = ""
+
         if file.exists():
             self.json = json.loads(file.read_text(encoding='utf8'))
+            self.oldName = self.json['name']
+            self.oldDesc = self.json['desc']
         else:
             self.json = {
                 'platform': 'unk',
@@ -63,6 +68,11 @@ class BufferedMod:
         self.json["extern_links"] = links
 
         self.json["game_to_mod_version"] = self.game_to_mod_versions
+
+        if self.oldName != "" and self.oldName != self.json['name']:
+            self.json['dirtyName'] = True
+        if self.oldDesc != "" and self.oldDesc != self.json['desc']:
+            self.json['dirtyDesc'] = True
 
         self.file.write_text(json.dumps(self.json, indent=2, ensure_ascii=False, separators=(', ',': ')), encoding='utf8')
 
