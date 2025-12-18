@@ -45,7 +45,7 @@ import datetime
 import re
 build_time = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8), name='Asia/Shanghai')).date()
 
-quest_mod_versions = requests.get(f"https://mods.bsquest.xyz/versions.json").json()
+quest_mod_versions = [x for x in requests.get(f"https://raw.githubusercontent.com/QuestPackageManager/bs-coremods/refs/heads/main/core_mods.json").json()]
 filtered_quest_mod_versions = [x for x in quest_mod_versions if re.match('^[0-9\\._]+$', x)]
 latest_quest_version = max(filtered_quest_mod_versions)
 
