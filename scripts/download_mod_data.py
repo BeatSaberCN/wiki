@@ -38,7 +38,7 @@ class BufferedMod:
         if file.exists():
             self.json = json.loads(file.read_text(encoding='utf8'))
             self.oldName = self.json['name']
-            self.oldDesc = self.json['desc']
+            self.oldDesc = self.json['desc'] if 'desc' in self.json else ""
         else:
             self.json = {
                 'platform': 'unk',
